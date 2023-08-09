@@ -6,13 +6,13 @@
 /*   By: dimarque <dimarque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 17:02:22 by dimarque          #+#    #+#             */
-/*   Updated: 2023/08/08 15:13:58 by dimarque         ###   ########.fr       */
+/*   Updated: 2023/08/08 16:20:55 by dimarque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *str)
+/* size_t	ft_strlen(char *str)
 {
 	int	i;
 
@@ -23,3 +23,4 @@ size_t	ft_strlen(const char *str)
 		i++;
 	return (i);
 }
+ */

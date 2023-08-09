@@ -6,7 +6,7 @@
 /*   By: dimarque <dimarque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 15:57:51 by dimarque          #+#    #+#             */
-/*   Updated: 2023/08/08 15:22:47 by dimarque         ###   ########.fr       */
+/*   Updated: 2023/08/09 11:34:03 by dimarque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,14 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+
+// for ft_printf
+# include <stdarg.h>
+
+// for get_next_line
+# include <fcntl.h> // O_RDONLY
+# include <stdio.h>
+# include <stdlib.h>
 
 typedef struct s_list
 {
@@ -48,7 +56,7 @@ int			ft_toupper(int ch);
 
 // parte 2
 char		*ft_substr(char const *s, unsigned int start, size_t len);
-char		*ft_strjoin(char const  *s1, char const *s2);
+char		*ft_strjoin(char const *s1, char const *s2);
 char		*ft_strtrim(char const *s1, char const *set);
 void		ft_putchar_fd(char c, int fd);
 void		ft_putstr_fd(char *s, int fd);
@@ -71,25 +79,22 @@ void		ft_lstiter(t_list *lst, void (*f)(void *));
 t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 // ft_printf
-# include <stdarg.h>
-int	ft_base(long long nbr, char *type);
-int	ft_options(va_list ap, const char type);
-int	ft_print_ptr(unsigned long long nbr, char *type);
-int	ft_printchar(int c);
-int	ft_printf(const char *s, ...);
-int	ft_printnbr(int nbr);
-int	ft_printstr(char *str);
+int			ft_base(long long nbr, char *type);
+int			ft_options(va_list ap, const char type);
+int			ft_print_ptr(unsigned long long nbr, char *type);
+int			ft_printchar(int c);
+int			ft_printf(const char *s, ...);
+int			ft_printnbr(int nbr);
+int			ft_printstr(char *str);
 
 // get next line
-# include <fcntl.h> // O_RDONLY
-# include <stdio.h>
-# include <stdlib.h>
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 2
 # endif
-char	*get_next_line(int fd);
-size_t	ft_strlen_gnl(const char *str);
-char	*ctrl_l(char *buffer);
+
+char		*get_next_line(int fd);
+size_t		ft_strlen_gnl(const char *str);
+char		*ctrl_l(char *buffer);
 
 #endif

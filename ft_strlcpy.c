@@ -6,11 +6,11 @@
 /*   By: dimarque <dimarque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 17:39:14 by dimarque          #+#    #+#             */
-/*   Updated: 2022/11/10 14:14:11 by dimarque         ###   ########.fr       */
+/*   Updated: 2023/08/09 10:43:34 by dimarque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include "libft.h"
 
 size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {

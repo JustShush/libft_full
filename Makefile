@@ -79,10 +79,10 @@ bonus: $(B_OBJ)
 
 clean:
 	@/bin/rm -f $(OBJ) $(B_OBJ)
-#	$(MSG2)
+	$(MSG2)
 
 fclean: clean
 	@/bin/rm -f $(NAME)
-	$(MSG2)
+#	$(MSG2)
 
 re: fclean all
